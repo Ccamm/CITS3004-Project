@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<header>
+  <h1>🥷 Become a Web Ninja Today! 🥷 </h1>
+  <img src='/images/proninja.jpg' />
+</header>
+
+<p><b>Sign up for our Web Ninja course today!</b></p>
+
+<p>You will learn how to:</p>
+
+<ul>
+  <li>Design a pretty website that will attract customers</li>
+  <li>Develop a website using a modern framework</li>
+  <li>Build light weight REST APIs</li>
+  <li>Use the secure programming language Python, unlike PHP that is horrible and has thousands of different vulnerabilities</li>
+</ul>
+
+<p>If you are interested at becoming a Web Ninja send us your email and we will contact you about our course!</p>
+
+<form action="/signup" method="post" id="signup-form">
+  <input type="email" placeholder="Email" name="email" value=""><br>
+  <input id="form-submit" type="submit" value="Submit"><br>
+</form>
+{% endblock %}

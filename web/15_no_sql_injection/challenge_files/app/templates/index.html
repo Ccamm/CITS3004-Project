@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>🔒 Secure Login 🔒</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/main.css" />
+  </head>
+
+  <body>
+    <div id="content">
+      <header>
+        <h1>🔒 Secure Login 🔒</h1>
+      </header>
+      <p id="error">{{ error }}</p>
+      <form action="/api/login" method="post" id="login-form">
+        <input type="text" placeholder="Username" name="username" value=""><br>
+        <input type="password" placeholder="Password" name="password" value=""><br>
+        <input id="submit" type="button" value="Submit"><br>
+      </form>
+    </div>
+
+    <div id="particles-js"></div>
+
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/particles.min.js"></script>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>
