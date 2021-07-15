@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>🚫💃 The Anti Social Society 🕺🚫</title>
+    <title>🚫🍍 The Anti Pineapple on Pizza Society 🍕🚫</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <style>
@@ -15,33 +15,32 @@
 
   <body style="background-color:powderblue;">
     <header>
-      <h1>🚫💃 The Anti Social Society 🕺🚫</h1>
-      <p>Who does not hate going outside and talking to other human beings?</p>
-      <p>It is disgusting how some people can spend time with each other and form this weird thing called <i>friendships</i> (ewwww 🤮)</p>
-      <p>We have decided to fight against these social people and form the</p>
-      <p><b>Anti Social Society (ASS)</b></p>
-      <p>If you want to join ASS today please fill in the form below and we will get in contact with you about what we have planned!</p>
+      <h1>🚫🍍 The Anti Pineapple on Pizza Society 🍕🚫</h1>
+      <p>We believe that putting <b>Pineapple</b> on <b>Pizza</b> is one of the <b>GREATEST SINS</b> that can be committed!</p></br>
+      <p>You are destroying the holy balance of the tasty mozzarella, sweet tomato sugo and the salty bacon with the</p>
+      <p>🤮🤮🤮<b>OBNOXIOUSLY OVERPOWERING FLAVOURS OF PINEAPPLE!</b>🤮🤮🤮</p></br>
+      <p>Anyway, if you agree with me that any Pizza with Pineapple on it should be called <b>Toilet Paper</b> instead of Hawaiian Pizza please join my society below!</p>
+
     </header>
 
     <br>
-    
+
     <?php
       if (isset($_POST) and !empty($_POST["email"])) {
         $email = $_POST["email"];
-        echo "<p>Thank you for joining ASS!</p>";
+        echo "<p>Thank you for joining the Anti Pineapple on Pizza Society!</p>";
         echo "<p>We will send you information about our club to $email soon!</p>";
-        echo "<p>CTF{wHy_0n_3aRtH_w0vLd_a_cLuB_g1ve_th3m5eLv3s_tH4t_n4m3??!?}</p>";
+        echo "<p>CTF{n3v3R_tRv5t_d3_cL1eNt5_111!11}</p>";
       }
       else {
-        echo "<p>Due to the excessive number of people wanting to join, we have decided to disable signing up to our society.</p>";
-        echo "<p>This is because too many people joining ASS goes against our core beliefs.</p>";
-        echo "<p>We are sorry if this upsets anyone.</p>";
+        echo "<p>😡😡😡Unforunately I have disabled signups for now, due to pineapple loving trolls keep on joining!😡😡😡</p>";
+        echo "<p>I am sorry for anyone that legitimately wants to join the society.</p>";
         echo '<br>';
         echo '<ul style="list-style-type:none;">';
         echo '<form method="post">';
         echo '<li><h3>Sign Up Form</h3></li>';
         echo '<li><input type="email" placeholder="Email Address" name="email" value=""></li>';
-        echo '<li><input type="submit" value="Join ASS" disabled></li>';
+        echo '<li><input type="submit" value="Join the Anti Pineapple on Pizza Society" disabled></li>';
         echo '</form>';
         echo '</u>';
       }
