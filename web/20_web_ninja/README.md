@@ -4,6 +4,8 @@
 
 The flag is located at `/flag` on the server.
 
+**Provided Files:** [students_web_ninja.zip](provided_files/students_web_ninja.zip)
+
 **Flag:** CTF{tH3s3_n1Nj4s_aR3_h3cK1nG_mY_jInjA_t3MpLatEs!!11one!}
 
 ## Solution
