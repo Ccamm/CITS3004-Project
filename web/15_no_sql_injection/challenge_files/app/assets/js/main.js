@@ -3,14 +3,13 @@
 
   $("#submit").click(function() {
     var formData = $("#login-form").serializeArray();
-    var jsonString = "{";
-    formData.forEach((x, i) => jsonString = jsonString + '"' + x["name"] + '":"' + x["value"] + '",');
-    jsonString = jsonString.slice(0,-1);
-    jsonString = jsonString + "}"
+    var loginForm = {};
+    formData.forEach((x, i) => loginForm[x["name"]] = x["value"]);
     $.ajax({
+      cache: false,
       type: "POST",
       url: "/api/login",
-      data: jsonString,
+      data: JSON.stringify(loginForm),
       success: function(data) {
         window.location.replace(data.url);
       },
