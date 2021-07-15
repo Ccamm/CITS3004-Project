@@ -17,5 +17,7 @@ CREATE TABLE IF NOT EXISTS "flag" (
 );
 
 INSERT INTO "users" ("username", "password") VALUES ("nigel", "nooneisevergoingtoguessthispasswordsinceitissooooomanycharacterslong!");
-INSERT INTO "feedback" ("name", "email", "message") VALUES ("David", "david@david.com", "This website is alright, you just took a HTML5 Up template and chucked PHP into it...");
+INSERT INTO "feedback" ("name", "email", "message") VALUES ("David", "david@themadhacker.com", "Your website has several SQL injection vulnerabilities... Please use prepared statements and fix them IMMEDIATELY!");
+INSERT INTO "feedback" ("name", "email", "message") VALUES ("Ghostccamm", "fake@email.com", "I love the SQL injections that you have added as a feature to this website :)");
+INSERT INTO "feedback" ("name", "email", "message") VALUES ("Alvaro", "alvaro@email.com", "Both the login and feedback pages do not properly sanitise user inputs before querying the backend DB. This is really serious and you need to fix this!");
 INSERT INTO "flag" ("flag") VALUES ("CTF{i_5h0uLd_pRoBs_l3aRn_aBoUt_pRePaRed_qU3ri3s...}")
