@@ -8,6 +8,8 @@ The shared key is then hashed using SHA256 that is then used to encrypt Bob's or
 
 **Flag:** CTF{g1mMe_4_j1fFie_t0_d3cRyPt_tH15_d1fFi3!}
 
+**Provided Files:** [students_diffiecult_communications.zip](provided_files/students_diffiecult_communications.zip)
+
 ## Solution
 
 * [Solution](challenge_files/solution.py)
