@@ -1,0 +1,22 @@
+version: '3.3'
+services:
+  web-server:
+    container_name: cssubmitv2-web
+    image: cssubmit-v2:latest
+    depends_on:
+      - mysql-server
+    ports:
+      - 1337:1337
+  mysql-server:
+    container_name: cssubmitv2-mysql
+    image: mysql
+    restart: always
+    volumes:
+      - ./create-db.sql:/docker-entrypoint-initdb.d/1.sql
+    environment:
+      MYSQL_ROOT_PASSWORD: FZAdBDx!nYXHX$KJrNiF7uqqQayZ@Ff#
+      MYSQL_DATABASE: cssubmitdb
+      MYSQL_USER: development
+      MYSQL_PASSWORD: supersecurelongpasswordnoonewillgetlol
+    ports:
+      - 3306:3306
