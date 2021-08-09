@@ -24,6 +24,7 @@ int main(int argc, char **argv) {
   }
 
   srand(seed);
+  // Need to skip the first generated number
   rand();
 
   for (int i = 0; i < 99; i++) {
