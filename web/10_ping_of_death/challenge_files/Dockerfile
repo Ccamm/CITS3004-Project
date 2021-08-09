@@ -21,6 +21,7 @@ COPY src /var/www/html
 
 # Copy flag
 COPY flag /flag
+RUN chmod 444 /flag
 
 # Setup permissions
 RUN chown -R www-data:www-data /var/www/html /var/lib/nginx
