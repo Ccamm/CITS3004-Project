@@ -2,7 +2,7 @@
 
 **Description:** BEHOLD THE GAME THAT WILL BE KING OF THE ESPORT INDUSTRY! GUESS MY NUMBER! It has everything that all other games lack to some degree; action, suspense, betrayal, battle royal, someone screaming into their microphone and overpriced loot boxes!
 
-Some critics question if our game can be beaten, but we know it is impossible since we use a *psuedo random number generator* that has been used for decades! You can try beating this game, but we bet you won't be able to!
+Some critics question if our game can be beaten, but we know it is impossible since we use a *pseudo random number generator* that has been used for decades! You can try beating this game, but we bet you won't be able to!
 
 **Flag:** CTF{0i_y0v_w3rE_cHe4t!nG!_y0u_w3rEnT_sUpPo5eD_2_gVeS5_mY_nUmBeRs!1!!}
 
