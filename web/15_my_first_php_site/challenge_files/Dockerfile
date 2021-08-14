@@ -10,7 +10,6 @@ RUN echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | tee /etc
 # Install PHP dependencies and sqlite3
 RUN apt update && apt install -y php7.4-fpm php7.4-sqlite3 sqlite3 libsqlite3-dev
 
-
 # Configure php-fpm and nginx
 COPY config/fpm.conf /etc/php/7.4/fpm/php-fpm.conf
 COPY config/supervisord.conf /etc/supervisord.conf
