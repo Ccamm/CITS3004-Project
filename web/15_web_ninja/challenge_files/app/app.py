@@ -41,5 +41,5 @@ def send_images(path):
     return send_from_directory("images", path)
 
 if __name__ == "__main__":
-    port = 1337
+    port = 1008
     app.run(host="0.0.0.0", port=port)

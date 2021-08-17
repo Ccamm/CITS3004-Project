@@ -37,6 +37,6 @@ RUN chown -R www-data:www-data /var/www/html /var/lib/nginx
 COPY flag /flag
 RUN chmod 444 /flag
 # Expose the port nginx is listening on
-EXPOSE 1337
+EXPOSE 1005
 
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisord.conf"]

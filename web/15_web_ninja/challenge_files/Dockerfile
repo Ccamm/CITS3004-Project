@@ -18,6 +18,6 @@ COPY /app .
 RUN pip3 install -r requirements.txt
 
 # Expost the port flask is reachable on
-EXPOSE 1337
+EXPOSE 1008
 
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisord.conf"]

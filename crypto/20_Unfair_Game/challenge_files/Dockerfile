@@ -16,6 +16,6 @@ RUN gcc -o /app/game /app/game.c
 # Setup startup script
 RUN chmod +x /app/start_server.sh
 
-EXPOSE 1337
+EXPOSE 1001
 
 CMD ["/start.sh"]

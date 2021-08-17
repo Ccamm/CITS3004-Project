@@ -28,7 +28,6 @@ If you have `pwnlib` installed correctly, you should see similar output to what 
     Stack:    No canary found
     NX:       NX enabled
     PIE:      No PIE (0x400000)
-
 ```
 
 Next we will install `edb`, which is a graphical debugger that will be helpful with developing our buffer overflow exploit. You can install `edb` running the following commands.
@@ -60,7 +59,6 @@ First we will check the security settings for `demo` and see what are our limita
     Stack:    No canary found
     NX:       NX enabled
     PIE:      No PIE (0x400000)
-
 ```
 
 As we can see only the non-executable stack protection has been implemented. This means that we will be able to craft a reliable buffer overflow exploit (if one exists), but we will not be able to execute our malicious payload on the stack.
@@ -221,7 +219,6 @@ Name: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 Thanks for connecting AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA!
 I go to go now, bye!
 zsh: segmentation fault  ./demo
-
 ```
 
 **GREAT!**
@@ -238,7 +235,6 @@ To do this, we will use the `pattern.py` Python script that you downloaded in th
 ┌──(ghostccamm㉿kali)-[~/…/challenge_files/provided_files/student_bofdev/demo]
 └─$ python3 pattern.py 300
 Aa0Aa1Aa2Aa3Aa4Aa5Aa6Aa7Aa8Aa9Ab0Ab1Ab2Ab3Ab4Ab5Ab6Ab7Ab8Ab9Ac0Ac1Ac2Ac3Ac4Ac5Ac6Ac7Ac8Ac9Ad0Ad1Ad2Ad3Ad4Ad5Ad6Ad7Ad8Ad9Ae0Ae1Ae2Ae3Ae4Ae5Ae6Ae7Ae8Ae9Af0Af1Af2Af3Af4Af5Af6Af7Af8Af9Ag0Ag1Ag2Ag3Ag4Ag5Ag6Ag7Ag8Ag9Ah0Ah1Ah2Ah3Ah4Ah5Ah6Ah7Ah8Ah9Ai0Ai1Ai2Ai3Ai4Ai5Ai6Ai7Ai8Ai9Aj0Aj1Aj2Aj3Aj4Aj5Aj6Aj7Aj8Aj9
-
 ```
 
 We will input this long list of characters when we run our program using the `edb` debugger. Let's start up `edb` by typing the following commands.
@@ -264,7 +260,6 @@ Copy the text `c9Ad0Ad1` from the top of the stack and run the following command
 ┌──(ghostccamm㉿kali)-[~/…/challenge_files/provided_files/student_bofdev/demo]
 └─$ python3 pattern.py c9Ad0Ad1
 Pattern c9Ad0Ad1 first occurrence at position 88 in pattern.
-
 ```
 
 **Great!**
@@ -317,7 +312,6 @@ Thanks for connecting AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 I go to go now, bye!
 SUCCESSFUL BOF ATTACK! YAY :D
 zsh: segmentation fault  ./demo < exploit.bin
-
 ```
 
 If you have successfully exploited the `demo` program you can now do the main challenge!

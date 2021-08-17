@@ -22,6 +22,6 @@ COPY src /var/www/html
 RUN chown -R www-data:www-data /var/www/html /var/lib/nginx
 
 # Expose the port nginx is listening on
-EXPOSE 1337
+EXPOSE 1003
 
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisord.conf"]

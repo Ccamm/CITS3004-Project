@@ -43,12 +43,10 @@ int main() {
 	ignore_me_init_signal();
 
   int l;
-  char *realpass = "supersecurepassword1234";
+  char *realpass = "supersecurepassword1234\n";
   char pass[100];
   printf("Password: ");
   if (fgets(pass, 100, stdin) != NULL) {
-    l = strnlen(pass, 100);
-    pass[l-1] = '\0';
     printf("\nPassword has been submitted! Checking now!\n");
     if (strcmp(pass, realpass) == 0) {
       printf("\nSuccessful Login!\nHowever we are still developing this application so I am going to stop now!\n");
