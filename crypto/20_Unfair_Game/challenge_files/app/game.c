@@ -3,12 +3,33 @@
 #include <string.h>
 #include <time.h>
 #include <unistd.h>
+#include <signal.h>
 
 #define FLAG "CTF{0i_y0v_w3rE_cHe4t!nG!_y0u_w3rEnT_sUpPo5eD_2_gVeS5_mY_nUmBeRs!1!!}\0"
 #define BUF_SIZE 256
 #define TOTAL_ROUNDS 100
 
+void ignore_me_init_buffering() {
+	setvbuf(stdout, NULL, _IONBF, 0);
+	setvbuf(stdin, NULL, _IONBF, 0);
+	setvbuf(stderr, NULL, _IONBF, 0);
+}
+
+void kill_on_timeout(int sig) {
+  if (sig == SIGALRM) {
+  	printf("\n[!] Taking too long! You have been disconnected!\n");
+    _exit(0);
+  }
+}
+
+void ignore_me_init_signal() {
+	signal(SIGALRM, kill_on_timeout);
+	alarm(120);
+}
+
 int main() {
+  ignore_me_init_buffering();
+	ignore_me_init_signal();
   char user_buf[BUF_SIZE];
   int num, guess;
   int fails = 0;
@@ -32,7 +53,9 @@ int main() {
   while (round_no < TOTAL_ROUNDS) {
     num = rand();
     printf("I am thinking of a random integer, which number do you think it is?\n");
+    printf("Number: ");
     if (fgets(user_buf, BUF_SIZE, stdin) != NULL) {
+      printf("\n");
       char *ptr;
       guess = strtol(user_buf, &ptr, 10);
       if (guess == num) {
@@ -49,7 +72,6 @@ int main() {
       round_no++;
       printf("Rounds: %d, Wins: %d, Fails: %d\n\n", round_no, wins, fails);
     }
-    fgets(user_buf, BUF_SIZE, stdin);
     sleep(0.1);
   }
 

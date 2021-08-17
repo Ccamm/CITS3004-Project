@@ -8,10 +8,14 @@
 
 **Description:**
 
-Can you recover the original plaintext that was encrypted using XOR with a key that is 8 bytes long? The ciphertext is encoded as hex values and the plaintext is in the format of **CITS3004{ ... }**.
+Can you recover the original plaintext that was encrypted using XOR with a key that is **8 bytes long**? The ciphertext is encoded as hex values and the plaintext is in the format of **CITS3004{ ... }**.
 
 ```
 303c2436415b554d081641153a58172d400d243a022751481d21431d2634510d0741332e2d5a0b3a4318390b354a444852540d
+```
+
+```
+If P XOR K = C then C XOR P = K
 ```
 
 **Challenge Files:** hex_cipher.txt

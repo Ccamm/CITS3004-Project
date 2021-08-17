@@ -9,6 +9,8 @@
 #define TOTAL_ROUNDS 100
 
 int main() {
+  ignore_me_init_buffering();
+	ignore_me_init_signal();
   char user_buf[BUF_SIZE];
   int num, guess;
   int fails = 0;
@@ -32,7 +34,9 @@ int main() {
   while (round_no < TOTAL_ROUNDS) {
     num = rand();
     printf("I am thinking of a random integer, which number do you think it is?\n");
+    printf("Number: ");
     if (fgets(user_buf, BUF_SIZE, stdin) != NULL) {
+      printf("\n");
       char *ptr;
       guess = strtol(user_buf, &ptr, 10);
       if (guess == num) {
@@ -49,7 +53,6 @@ int main() {
       round_no++;
       printf("Rounds: %d, Wins: %d, Fails: %d\n\n", round_no, wins, fails);
     }
-    fgets(user_buf, BUF_SIZE, stdin);
     sleep(0.1);
   }
 
