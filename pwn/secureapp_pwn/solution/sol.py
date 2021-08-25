@@ -1,7 +1,7 @@
 from telnetlib import Telnet
 import struct
 
-RHOST = "localhost"
+RHOST = "cits4projtg.cybernemosyne.xyz"
 RPORT = 1002
 
 ATTACK_REMOTE = True

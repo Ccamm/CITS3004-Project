@@ -15,7 +15,8 @@ int find_seed(int init_seed, int target_num) {
 }
 
 int main(int argc, char **argv) {
-  int init_seed = time(NULL);
+  // + 1000 as a buffer for time differences between container and running this command
+  int init_seed = time(NULL) + 1000;
   int target_num = atoi(argv[1]);
 
   int seed = find_seed(init_seed, target_num);
