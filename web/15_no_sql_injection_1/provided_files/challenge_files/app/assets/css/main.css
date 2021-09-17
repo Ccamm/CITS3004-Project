@@ -1,0 +1,47 @@
+h1, p {
+  font-family: 'Open Sans', sans-serif;
+}
+
+input {
+  align-items: center;
+  align-content: center;
+  font-family: 'Open Sans', sans-serif;
+  width: 75%;
+  background-color: #f2f0f0;
+  border: none;
+  border-radius: 4px;
+  padding: 2px;
+  margin-top: 2px;
+}
+
+#submit {
+  background-color: #878686;
+}
+
+#error {
+  color: #a13d22;
+}
+
+#particles-js {
+    background-color: rgb(44,46,67);
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    z-index: -1;
+}
+
+#content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  padding: 20px;
+  text-align: center;
+  border-radius: 25px;
+  background: #e0e0e0;
+  display: none;
+}
