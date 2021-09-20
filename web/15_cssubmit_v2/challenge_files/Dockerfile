@@ -32,7 +32,18 @@ COPY init_db.sh /run/init_db.sh
 RUN chmod +x /run/init_db.sh
 
 # Setup permissions
-RUN chown -R www-data:www-data /var/www/html /var/lib/nginx
+RUN chown -R www-data:www-data /var/www/html/assets
+RUN chown -R www-data:www-data /var/www/html/images
+RUN chown -R www-data:www-data /var/www/html/uploads
+
+RUN chmod -R 770 /var/www/html/uploads
+RUN chmod -R 550 /var/www/html/assets
+RUN chmod -R 550 /var/www/html/images
+RUN chmod -R +r /var/www/html/
+RUN echo "echo One of our team members ran rm -rf / to see what would happen and it wiped all of our work...;" > /bin/rm
+RUN echo "echo So we have removed it from the server to prevent them doing that again.;" >> /bin/rm
+RUN echo "echo Someone in our prof comp team kept on setting insecure permissions so we just got rid of chmod;" > /bin/chmod
+RUN echo "echo This is also a bad command that our team member broke our server with;" > /bin/rmdir
 
 COPY flag /flag
 RUN chmod 444 /flag

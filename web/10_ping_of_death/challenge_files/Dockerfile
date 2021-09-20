@@ -24,7 +24,15 @@ COPY flag /flag
 RUN chmod 444 /flag
 
 # Setup permissions
-RUN chown -R www-data:www-data /var/www/html /var/lib/nginx
+RUN chown -R www-data:www-data /var/www/html/assets
+RUN chown -R www-data:www-data /var/www/html/images
+
+RUN chmod -R 550 /var/www/html/assets
+RUN chmod -R 550 /var/www/html/images
+RUN chmod -R +r /var/www/html/
+RUN echo "echo Gotchya ya cheeky scrub trying to run rm -rf / on my challenge!" > /bin/rm
+RUN echo "echo We are gonna DDoS your IP for trying to hack this server!" > /bin/chmod
+RUN echo "echo My ping of death is like the SOL cannon from Akira. Watch yourself!" > /bin/rmdir
 
 # Expose the port nginx is listening on
 EXPOSE 1004
