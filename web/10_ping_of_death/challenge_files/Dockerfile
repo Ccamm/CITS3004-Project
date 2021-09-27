@@ -12,6 +12,13 @@ RUN apt update && apt install -y php7.4-fpm iputils-ping
 
 
 # Configure php-fpm and nginx
+RUN mkdir -p /bin/challenge
+RUN cp /bin/cat /bin/challenge/cat
+RUN cp /bin/ls /bin/challenge/ls
+RUN cp /usr/bin/id /bin/challenge/id
+RUN cp /usr/bin/whoami /bin/challenge/whoami
+RUN ln -s /bin/ping /bin/challenge/ping 
+
 COPY config/fpm.conf /etc/php/7.4/fpm/php-fpm.conf
 COPY config/supervisord.conf /etc/supervisord.conf
 COPY config/nginx.conf /etc/nginx/nginx.conf
